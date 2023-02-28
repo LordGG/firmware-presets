@@ -14,6 +14,7 @@
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>The JeNo is a sturdy OpenSource frame, inspired from the Apex, natively O3 compatible and customizable with many options. Visit the
 #$ DESCRIPTION: <a href="https://www.printables.com/fr/model/339099-jeno-51-drone-frame">JeNo official Printables Page</a> to learn more about it.
+#$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
 #$ DESCRIPTION: Choose from the options from the drop-down:
