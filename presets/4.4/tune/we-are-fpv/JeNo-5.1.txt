@@ -32,8 +32,9 @@
 #$ DESCRIPTION:
 #$ DESCRIPTION: * If you fly without any Action Cam, try to center the lipo on the Top plate
 #$ DESCRIPTION: * RPM Filter is recommanded, although it also works great without it (you can install <a href="https://esc-configurator.com/">Bluejay</a> on BLHeli_S ESCs)
-#$ DESCRIPTION: * Basic preset's tune is already quite high. Enable "High tune" and "High performance filter" 
+#$ DESCRIPTION: * Basic preset's tune is already quite high. Enable "High tune" and "High performance filter" ony after testing default settings.
 #$ DESCRIPTION: * Apply your specific RC Link preset before this preset (or use the generic ones provided with this preset)
+#$ DESCRIPTION: * If you manually applied a RC Link preset, make sure RC Smoothing Auto Factor is not too high (45 is a good compromise)
 #$ DESCRIPTION: * Enabling I-term Relax cutoff at 17 makes the quad feel more "rigid"
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
@@ -46,6 +47,32 @@
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION: 
+
+
+set motor_pwm_protocol = DSHOT300
+
+# -- ESCs' protocol selection --
+#$ OPTION_GROUP BEGIN: ESCs' protocol :
+
+    #$ OPTION BEGIN (UNCHECKED): DShot600 (F7 & up) + RPM
+		
+		set motor_pwm_protocol = DSHOT600
+                
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): Dshot300 (F4 or BMI) + RPM
+	
+		set motor_pwm_protocol = DSHOT300
+        
+    #$ OPTION END
+	
+	#$ OPTION BEGIN (UNCHECKED): Dshot600 (F4 and 8K Gyro) <b>NO RPM</b>
+
+		set motor_pwm_protocol = DSHOT600
+        
+    #$ OPTION END
+
+#$ OPTION_GROUP END
 
 # -- PIDs for JeNo --
 
@@ -99,8 +126,6 @@ set yaw_lowpass_hz = 0
 
 set simplified_dterm_filter_multiplier = 140
 
-set motor_pwm_protocol = DSHOT300
-
 #$ OPTION_GROUP BEGIN: Filtering options :
 
     #$ OPTION BEGIN (CHECKED): Enable RPM filter (if supported)
@@ -130,34 +155,7 @@ set motor_pwm_protocol = DSHOT300
 
 #$ OPTION_GROUP END
 
-#$ OPTION_GROUP BEGIN: ESCs' protocol :
-
-    #$ OPTION BEGIN (UNCHECKED): DShot600 (F7 & up) + RPM
-        #$ INCLUDE: presets/4.3/rates/defaults.txt
-		
-		set motor_pwm_protocol = DSHOT600
-                
-    #$ OPTION END
-
-    #$ OPTION BEGIN (UNCHECKED): Dshot300 (F4 or BMI) + RPM
-        #$ INCLUDE: presets/4.3/rates/defaults.txt
-	
-		set motor_pwm_protocol = DSHOT300
-        
-    #$ OPTION END
-	
-	#$ OPTION BEGIN (UNCHECKED): Dshot600 (F4 and 8K Gyro) <b>NO RPM</b>
-        #$ INCLUDE: presets/4.3/rates/defaults.txt
-
-		set motor_pwm_protocol = DSHOT600
-        
-    #$ OPTION END
-
-#$ OPTION_GROUP END
-
 #$ OPTION_GROUP BEGIN: Choose RC Link
-set rc_smoothing_auto_factor = 45
-
 
     #$ OPTION BEGIN (UNCHECKED): Crossfire Dynamic
         #$ INCLUDE: presets/4.3/rc_link/defaults.txt
