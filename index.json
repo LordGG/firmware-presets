@@ -4317,7 +4317,7 @@
     },
     {
       "fullPath": "presets/4.4/tune/we-are-fpv/JeNo-5.1.txt",
-      "hash": "f037ff5df2ad4631c1138eb6540f4dcc2cc116b044dda61e9687a898e1cd560b",
+      "hash": "5672d86ea6291612f10069c71d81f31b7557facfea7e6e00ac13f4a9a7e7cf9d",
       "title": "JeNo 5.1 Inch",
       "firmware_version": [
         "4.4"
@@ -4333,6 +4333,7 @@
         "Cinematic"
       ],
       "author": "Jerome @jejefpv",
+      "force_options_review": true,
       "priority": 1000000000000
     },
     {

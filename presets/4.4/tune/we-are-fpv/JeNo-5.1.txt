@@ -4,9 +4,9 @@
 #$ STATUS: EXPERIMENTAL
 #$ KEYWORDS: JeNo, 6S, Freestyle, 5 inch, 5", Cinematic
 #$ AUTHOR: Jerome @jejefpv
+#$ FORCE_OPTIONS_REVIEW: TRUE
 
 #$ PARSER: MARKED
-#$ INCLUDE_WARNING: misc/warnings/en/rpm_filters.txt
 
 #$ DESCRIPTION: <a href="https://www.wearefpv.fr/"><img src="https://www.wearefpv.fr/wp-content/uploads/2023/02/WaF-Logo-Preset.png" width="327px" height="97" style="margin-left: auto; margin-right: auto; display: block;"/></a>
 #$ DESCRIPTION:
@@ -17,72 +17,63 @@
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: Choose from the options from the drop-down:
+#$ DESCRIPTION: Choose the following options from the drop-down:
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: * Pick PIDs option
+#$ DESCRIPTION: * Pick PIDs option(s)
 #$ DESCRIPTION: * Pick Filtering option(s)
 #$ DESCRIPTION: * Select ESCs protocol
 #$ DESCRIPTION: * Pick your Radio Link or search in presets if not found
-#$ DESCRIPTION: * Try some freestyle rates modeled on the 3 main styles...
 #$ DESCRIPTION: 
+#$ DESCRIPTION: <br>
+#$ DESCRIPTION:
+#$ DESCRIPTION: Recommandations :
+#$ DESCRIPTION: * RPM Filter is recommanded, although it also works great without it (you can install <a href="https://esc-configurator.com/">Bluejay</a> on BLHeli_S ESCs)
+#$ DESCRIPTION: * Basic preset tune is already quite high. Enable "High tune" and "High performance filter" 
+#$ DESCRIPTION: * Apply your specific RC Link preset before this preset (or use the generic ones provided with this preset)
+#$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
 #$ DESCRIPTION: Enjoy!
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: Support, feedback and chat:
-#$ DESCRIPTION:
-#$ DESCRIPTION: <br>
-#$ DESCRIPTION:
-#$ DESCRIPTION:*[FORUM SUPPORT/FEEDBACK](https://forum.wearefpv.fr/topic/19574-jeno-51-un-ch%C3%A2ssis-custom-modulaire-avec-fov-d%C3%A9gag%C3%A9-o3)
+#$ DESCRIPTION: * [FORUM SUPPORT/FEEDBACK](https://forum.wearefpv.fr/topic/19574-jeno-51-un-ch%C3%A2ssis-custom-modulaire-avec-fov-d%C3%A9gag%C3%A9-o3)
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION: 
 
+# -- PIDs for JeNo --
+
 #$ INCLUDE: presets/4.3/tune/defaults.txt
 
-# -- Antigravity --
-
-set anti_gravity_gain = 5000
+set simplified_master_multiplier = 90
+set simplified_d_gain = 160
+set simplified_pi_gain = 150
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 85
+set simplified_pitch_d_gain = 105
+set simplified_dterm_filter_multiplier = 140
+set dyn_idle_min_rpm = 30
 
 #$ OPTION_GROUP BEGIN:PIDs options :
 
-    #$ OPTION BEGIN (UNCHECKED):High tune (clean build)
-
-        set simplified_master_multiplier = 130
-        set simplified_i_gain = 85
-        set simplified_d_gain = 110
-        set simplified_pi_gain = 110
-        set simplified_dmax_gain = 0
-        set simplified_feedforward_gain = 95
-        set simplified_pitch_pi_gain = 115
-
-    #$ OPTION END
-
     #$ OPTION BEGIN (CHECKED):I-term relax 17
 
-        set simplified_master_multiplier = 130
-        set simplified_i_gain = 85
-        set simplified_d_gain = 110
-        set simplified_pi_gain = 110
-        set simplified_dmax_gain = 0
-        set simplified_feedforward_gain = 95
-        set simplified_pitch_pi_gain = 105
+        set iterm_relax_cutoff = 17
 
     #$ OPTION END
 
     #$ OPTION BEGIN (UNCHECKED):ESCs @48 Khz or more
 
-        set simplified_master_multiplier = 115
-        set simplified_i_gain = 85
-        set simplified_d_gain = 110
-        set simplified_pi_gain = 110
-        set simplified_dmax_gain = 0
-        set simplified_feedforward_gain = 95
-        set simplified_pitch_pi_gain = 115
+        set thrust_linear = 20
+
+    #$ OPTION END
+	
+	#$ OPTION BEGIN (UNCHECKED):High tune (clean build)
+
+        set simplified_master_multiplier = 100
 
     #$ OPTION END
 
@@ -93,46 +84,44 @@ set anti_gravity_gain = 5000
 #$ INCLUDE: presets/4.3/filters/defaults.txt
 
 set dshot_bidir = OFF
-set simplified_gyro_filter_multiplier = 120
+set simplified_gyro_filter_multiplier = 140
 set gyro_lpf1_static_hz = 0
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
-set dyn_notch_count = 5
-set dyn_notch_q = 400
-set dyn_notch_min_hz = 90
-set dyn_notch_max_hz = 800
+set dyn_notch_count = 3
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 600
+set yaw_lowpass_hz = 0
 
 set simplified_dterm_filter_multiplier = 140
-set dterm_lpf1_dyn_min_hz = 0
-set dterm_lpf1_dyn_max_hz = 0
-set dterm_lpf1_dyn_expo = 0
+
+set motor_pwm_protocol = DSHOT300
 
 #$ OPTION_GROUP BEGIN: Filtering options :
 
-    #$ OPTION BEGIN (UNCHECKED): High performance (clean build)
-
-        set dshot_bidir = ON
-        set motor_pwm_protocol = DSHOT600
-        set rpm_filter_harmonics = 3
-        set rpm_filter_q = 1000
-        set dyn_notch_count = 2
-        set rpm_filter_fade_range_hz = 100
-
-    #$ OPTION END 
-
     #$ OPTION BEGIN (CHECKED): Enable RPM filter (if supported)
 
-        set gyro_hardware_lpf = OPTION_2
-        set simplified_gyro_filter_multiplier = 120
-        set gyro_lpf1_dyn_min_hz = 0
+        set dshot_bidir = ON
+		set rpm_filter_harmonics = 3
+		set rpm_filter_q = 500
+		set rpm_filter_min_hz = 100
+		set rpm_filter_fade_range_hz = 50
+		set dyn_notch_count = 1
+		set dyn_notch_q = 500
+		set dyn_idle_min_rpm = 30
+		set motor_poles = 14
 
-        set simplified_dterm_filter = OFF
-        set dterm_lpf1_dyn_min_hz = 0
-        set dterm_lpf1_dyn_max_hz = 0
-        set dterm_lpf1_dyn_expo = 0
-        set dterm_lpf1_static_hz = 0
-        set dterm_lpf2_static_hz = 110
-        set dterm_lpf2_type = BIQUAD
+    #$ OPTION END
+	
+	#$ OPTION BEGIN (UNCHECKED): High performance (clean build)
+	
+		set simplified_gyro_filter_multiplier = 155
+		set simplified_dterm_filter_multiplier = 155
+
+        set rpm_filter_harmonics = 2
+        set dyn_notch_count = 1
+		set dyn_notch_min_hz = 150
 
     #$ OPTION END 
 
@@ -140,39 +129,32 @@ set dterm_lpf1_dyn_expo = 0
 
 #$ OPTION_GROUP BEGIN: ESCs' protocol :
 
-    #$ OPTION BEGIN (UNCHECKED): DShot600 (F7 & up)
+    #$ OPTION BEGIN (UNCHECKED): DShot600 (F7 & up) + RPM
         #$ INCLUDE: presets/4.3/rates/defaults.txt
-
-        set roll_rc_rate = 2
-        set pitch_rc_rate = 2
-        set yaw_rc_rate = 2
-        set roll_expo = 40
-        set pitch_expo = 40
-        set yaw_expo = 40
-        set roll_srate = 80
-        set pitch_srate = 80
-        set yaw_srate = 60
-        
+		
+		set motor_pwm_protocol = DSHOT600
+                
     #$ OPTION END
 
-    #$ OPTION BEGIN (UNCHECKED): Dshot300 (F4 or BMI)
+    #$ OPTION BEGIN (UNCHECKED): Dshot300 (F4 or BMI) + RPM
+        #$ INCLUDE: presets/4.3/rates/defaults.txt
+	
+		set motor_pwm_protocol = DSHOT300
+        
+    #$ OPTION END
+	
+	#$ OPTION BEGIN (UNCHECKED): Dshot600 (F4 and 8K Gyro) <b>NO RPM</b>
         #$ INCLUDE: presets/4.3/rates/defaults.txt
 
-        set roll_rc_rate = 3
-        set pitch_rc_rate = 3
-        set yaw_rc_rate = 3
-        set roll_expo = 35
-        set pitch_expo = 35
-        set yaw_expo = 35
-        set roll_srate = 105
-        set pitch_srate = 105
-        set yaw_srate = 90
-
+		set motor_pwm_protocol = DSHOT600
+        
     #$ OPTION END
 
 #$ OPTION_GROUP END
 
 #$ OPTION_GROUP BEGIN: Choose RC Link
+set rc_smoothing_auto_factor = 45
+
 
     #$ OPTION BEGIN (UNCHECKED): Crossfire Dynamic
         #$ INCLUDE: presets/4.3/rc_link/defaults.txt
@@ -185,7 +167,6 @@ set dterm_lpf1_dyn_expo = 0
         set feedforward_jitter_factor = 10
         set feedforward_boost = 10
 
-        set rc_smoothing_auto_factor = 45
         set rc_smoothing_auto_factor_throttle = 45
 
     #$ OPTION END
@@ -201,7 +182,6 @@ set dterm_lpf1_dyn_expo = 0
         set feedforward_jitter_factor = 10
         set feedforward_boost = 5
 
-        set rc_smoothing_auto_factor = 45
         set rc_smoothing_auto_factor_throttle = 45
 
     #$ OPTION END
@@ -216,7 +196,6 @@ set dterm_lpf1_dyn_expo = 0
         set feedforward_smooth_factor = 30
         set feedforward_jitter_factor = 7
 
-        set rc_smoothing_auto_factor = 45
         set rc_smoothing_auto_factor_throttle = 45
 
     #$ OPTION END
@@ -232,7 +211,6 @@ set dterm_lpf1_dyn_expo = 0
         set feedforward_jitter_factor = 4
         set feedforward_boost = 18
 
-        set rc_smoothing_auto_factor = 45
         set rc_smoothing_auto_factor_throttle = 45
 
     #$ OPTION END
@@ -248,7 +226,6 @@ set dterm_lpf1_dyn_expo = 0
         set feedforward_jitter_factor = 3
         set feedforward_boost = 18
 
-        set rc_smoothing_auto_factor = 45
         set rc_smoothing_auto_factor_throttle = 45
 
     #$ OPTION END
