@@ -17,7 +17,7 @@
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: Choose the following options from the drop-down:
+#$ DESCRIPTION: <b>Choose the following options from the drop-down:</b>
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
@@ -28,10 +28,13 @@
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: Recommandations :
+#$ DESCRIPTION: <b>Recommandations :</b>
+#$ DESCRIPTION:
+#$ DESCRIPTION: * If you fly without any Action Cam, try to center the lipo on the Top plate
 #$ DESCRIPTION: * RPM Filter is recommanded, although it also works great without it (you can install <a href="https://esc-configurator.com/">Bluejay</a> on BLHeli_S ESCs)
-#$ DESCRIPTION: * Basic preset tune is already quite high. Enable "High tune" and "High performance filter" 
+#$ DESCRIPTION: * Basic preset's tune is already quite high. Enable "High tune" and "High performance filter" 
 #$ DESCRIPTION: * Apply your specific RC Link preset before this preset (or use the generic ones provided with this preset)
+#$ DESCRIPTION: * Enabling I-term Relax cutoff at 17 makes the quad feel more "rigid"
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
