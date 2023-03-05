@@ -21,9 +21,9 @@
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
+#$ DESCRIPTION: * Select ESCs protocol and PIDs loop frequency
 #$ DESCRIPTION: * Pick PIDs option(s)
 #$ DESCRIPTION: * Pick Filtering option(s)
-#$ DESCRIPTION: * Select ESCs protocol
 #$ DESCRIPTION: * Pick your Radio Link or search in presets if not found
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
@@ -49,26 +49,34 @@
 #$ DESCRIPTION: 
 
 
-set motor_pwm_protocol = DSHOT300
-
 # -- ESCs' protocol selection --
-#$ OPTION_GROUP BEGIN: ESCs' protocol :
+#$ OPTION_GROUP BEGIN: Choose <b>ONE</b> ESCs' protocol & PIDs loop Freq. :
 
-    #$ OPTION BEGIN (UNCHECKED): DShot600 (F7 & up) + RPM
+    #$ OPTION BEGIN (UNCHECKED): <b>WITH RPM</b> DShot600 - 8Khz (F7 & up + 8K gyro)
 		
+		set pid_process_denom = 1
 		set motor_pwm_protocol = DSHOT600
                 
     #$ OPTION END
 
-    #$ OPTION BEGIN (UNCHECKED): Dshot300 (F4 or BMI) + RPM
+    #$ OPTION BEGIN (UNCHECKED): <b>WITH RPM</b> Dshot300 - 4Khz (F4 or BMI gyro)
 	
+		set pid_process_denom = 2
 		set motor_pwm_protocol = DSHOT300
         
     #$ OPTION END
 	
-	#$ OPTION BEGIN (UNCHECKED): Dshot600 (F4 and 8K Gyro) <b>NO RPM</b>
-
+	#$ OPTION BEGIN (UNCHECKED): <b>NO RPM</b> Dshot600 - 8Khz (8K Gyro)
+	
+		set pid_process_denom = 1
 		set motor_pwm_protocol = DSHOT600
+        
+    #$ OPTION END
+	
+	#$ OPTION BEGIN (UNCHECKED): <b>NO RPM</b> Dshot300 - 4Khz (BMI gyro)
+	
+		set pid_process_denom = 2
+		set motor_pwm_protocol = DSHOT300
         
     #$ OPTION END
 
@@ -89,19 +97,19 @@ set dyn_idle_min_rpm = 30
 
 #$ OPTION_GROUP BEGIN:PIDs options :
 
-    #$ OPTION BEGIN (CHECKED):I-term relax 17
+    #$ OPTION BEGIN (CHECKED): I-term relax 17
 
         set iterm_relax_cutoff = 17
 
     #$ OPTION END
 
-    #$ OPTION BEGIN (UNCHECKED):ESCs @48 Khz or more
+    #$ OPTION BEGIN (UNCHECKED): ESCs @48 Khz or more
 
         set thrust_linear = 20
 
     #$ OPTION END
 	
-	#$ OPTION BEGIN (UNCHECKED):High tune (clean build)
+	#$ OPTION BEGIN (UNCHECKED): High tune (clean build)
 
         set simplified_master_multiplier = 100
 
