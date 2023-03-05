@@ -13,7 +13,7 @@
 #$ DESCRIPTION: ### Preset pour le JeNo 5.1"
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>Le JeNo est un châssis robuste, inspiré de l'Apex, nativement compatible Air Unit O3 et personnalisable avec de nombreuses options. Visitez la
-#$ DESCRIPTION: <a href="https://www.printables.com/fr/model/339099-jeno-51-drone-frame">page Printable officielle du JeNo</a> pour en savoir plus.
+#$ DESCRIPTION: <a href="https://www.printables.com/fr/model/339099-jeno-51-drone-frame">page Printables officielle du JeNo</a> pour en savoir plus.
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
@@ -32,11 +32,11 @@
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: * Si vous volez <b>sans Action Cam</b>, essayer de <b>center la lipo</b> sur la Top plate
+#$ DESCRIPTION: * Si vous volez <b>sans Action Cam</b>, essayer de <b>centrer la lipo</b> sur la Top plate
 #$ DESCRIPTION: * <b>L'usage du RPM Filter est conseillé</b>, néanmoins, ça marche aussi très bien sans (vous pouvez installer <a href="https://esc-configurator.com/">Bluejay</a> sur des ESCs BLHeli_S)
-#$ DESCRIPTION: * Le tune de base du preset est déjà assez poussé. N'activez les options "Tune poussé" and "Filtrage hautes performances" seulement <b>après avoir testé avec les réglages par défaut</b>.
+#$ DESCRIPTION: * Le tune de base du preset est déjà assez poussé. N'activez les options "Tune poussé" et "Filtrage hautes performances" seulement <b>après avoir testé avec les réglages par défaut</b>.
 #$ DESCRIPTION: * Appliquez votre preset de lien Radio <b>avant</b> ce preset (ou utilisez l'un des génériques fournis avec ce preset)
-#$ DESCRIPTION: * Si vous avez manuellement appliquez un preset de lien Radio, <b>assurez vous que le RC Smoothing Auto Factor n'est pas trop élevé</b> (45 est un bon compromis)
+#$ DESCRIPTION: * Si vous avez manuellement appliqué un preset de lien Radio, <b>assurez vous que le RC Smoothing Auto Factor n'est pas trop élevé</b> (45 est un bon compromis)
 #$ DESCRIPTION: * L'activation du <b>I-term Relax cutoff</b> avec une valeur de 17 donne un feeling un peu plus "rigide" au quad comparé à la valeur par défaut (15)
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
@@ -55,7 +55,7 @@
 #$ INCLUDE: presets/4.4/tune/defaults_tune_filters.txt
 
 # ----- ESCs' protocol selection -----
-#$ OPTION_GROUP BEGIN: CHoisir <b>UN</b> protocol ESCs & une fréqu de boucle PIDs :
+#$ OPTION_GROUP BEGIN: Choisir <b>UN</b> protocole ESCs & une fréq de boucle PIDs :
 
     #$ OPTION BEGIN (UNCHECKED): <b>AVEC RPM</b> DShot600 - 8Khz (F7 & plus + gyro 8K)
 		
@@ -99,7 +99,7 @@ set dyn_idle_min_rpm = 30
 
 #$ OPTION_GROUP BEGIN: Options PIDs :
 
-    #$ OPTION BEGIN (CHECKED): I-term relax à 17
+    #$ OPTION BEGIN (CHECKED): I-term relax @17
 
         set iterm_relax_cutoff = 17
 

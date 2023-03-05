@@ -99,7 +99,7 @@ set dyn_idle_min_rpm = 30
 
 #$ OPTION_GROUP BEGIN: PIDs options :
 
-    #$ OPTION BEGIN (CHECKED): I-term relax at 17
+    #$ OPTION BEGIN (CHECKED): I-term relax @17
 
         set iterm_relax_cutoff = 17
 
