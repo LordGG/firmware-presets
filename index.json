@@ -469,7 +469,9 @@
       "vtx",
       "vtx table",
       "vtxtable",
+      "WAF",
       "Walksnail",
+      "WE are FPV",
       "whoop",
       "whoop lite",
       "whooptopia",
@@ -4317,7 +4319,7 @@
     },
     {
       "fullPath": "presets/4.4/tune/we-are-fpv/JeNo-5.1.txt",
-      "hash": "0f7067e2915a5a88214afbda1e3dd36cff6c8fa69ef42fad6a64a9ddfa5c2835",
+      "hash": "a382e8d9a38dcc67c80df0132536555917478ad7de7cacd73abe6b50ed2389fa",
       "title": "JeNo 5.1 Inch",
       "firmware_version": [
         "4.4"
@@ -4330,7 +4332,9 @@
         "Freestyle",
         "5 inch",
         "5\"",
-        "Cinematic"
+        "Cinematic",
+        "WE are FPV",
+        "WAF"
       ],
       "author": "Jerome @jejefpv",
       "force_options_review": true,

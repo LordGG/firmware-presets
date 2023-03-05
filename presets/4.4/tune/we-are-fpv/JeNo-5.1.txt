@@ -2,7 +2,7 @@
 #$ FIRMWARE_VERSION: 4.4
 #$ CATEGORY: TUNE
 #$ STATUS: EXPERIMENTAL
-#$ KEYWORDS: JeNo, 6S, Freestyle, 5 inch, 5", Cinematic
+#$ KEYWORDS: JeNo, 6S, Freestyle, 5 inch, 5", Cinematic, WE are FPV, WAF
 #$ AUTHOR: Jerome @jejefpv
 #$ FORCE_OPTIONS_REVIEW: TRUE
 
@@ -14,6 +14,7 @@
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>The JeNo is a sturdy OpenSource frame, inspired from the Apex, natively O3 compatible and customizable with many options. Visit the
 #$ DESCRIPTION: <a href="https://www.printables.com/fr/model/339099-jeno-51-drone-frame">JeNo official Printables Page</a> to learn more about it.
+#$ DESCRIPTION: * designed by <b>Je</b>rome and <b>No</b>chamo from the French WE are FPV community.
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
