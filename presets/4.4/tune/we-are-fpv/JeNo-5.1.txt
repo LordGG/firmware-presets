@@ -14,7 +14,6 @@
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>The JeNo is a sturdy OpenSource frame, inspired from the Apex, natively O3 compatible and customizable with many options. Visit the
 #$ DESCRIPTION: <a href="https://www.printables.com/fr/model/339099-jeno-51-drone-frame">JeNo official Printables Page</a> to learn more about it.
-#$ DESCRIPTION: * designed by <b>Je</b>rome and <b>No</b>chamo from the French WE are FPV community.
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
@@ -49,7 +48,8 @@
 #$ DESCRIPTION: * [FORUM SUPPORT/FEEDBACK](https://forum.wearefpv.fr/topic/19574-jeno-51-un-ch%C3%A2ssis-custom-modulaire-avec-fov-d%C3%A9gag%C3%A9-o3)
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
-#$ DESCRIPTION: 
+#$ DESCRIPTION: Designed by <b>Je</b>rome and <b>No</b>chamo from the French <a href="https://www.wearefpv.fr/">WE are FPV</a> community.
+#$ DESCRIPTION: <br>
 
 # -- Reset PIDs and Filters to default --
 #$ INCLUDE: presets/4.4/tune/defaults_tune_filters.txt
