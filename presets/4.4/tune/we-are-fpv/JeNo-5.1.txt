@@ -30,6 +30,8 @@
 #$ DESCRIPTION:
 #$ DESCRIPTION: <b>Recommandations :</b>
 #$ DESCRIPTION:
+#$ DESCRIPTION: <br>
+#$ DESCRIPTION:
 #$ DESCRIPTION: * If you fly without any Action Cam, try to center the lipo on the Top plate
 #$ DESCRIPTION: * RPM Filter is recommanded, although it also works great without it (you can install <a href="https://esc-configurator.com/">Bluejay</a> on BLHeli_S ESCs)
 #$ DESCRIPTION: * Basic preset's tune is already quite high. Enable "High tune" and "High performance filter" ony after testing default settings.
