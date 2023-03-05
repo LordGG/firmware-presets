@@ -212,6 +212,7 @@
       "4S",
       "5 In",
       "5 Inch",
+      "5 pouces",
       "5\"",
       "500Hz",
       "50Hz",
@@ -4318,9 +4319,32 @@
       "priority": 1000000000000
     },
     {
+      "fullPath": "presets/4.4/tune/we-are-fpv/JeNo-5.1-FR.txt",
+      "hash": "9ff2cd89a26e19ea2a1295303c0d7b1ad0daa72dc1c1da59ec981a7b8088ca55",
+      "title": "JeNo 5.1\" (FR)",
+      "firmware_version": [
+        "4.4"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "JeNo",
+        "6S",
+        "Freestyle",
+        "5 pouces",
+        "5\"",
+        "Cinematic",
+        "WE are FPV",
+        "WAF"
+      ],
+      "author": "Jerome @jejefpv",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/4.4/tune/we-are-fpv/JeNo-5.1.txt",
-      "hash": "8c2b8044ceb8f7bfe138583c4b9b36462fd2fed623f59077cd9d8529f988225f",
-      "title": "JeNo 5.1 Inch",
+      "hash": "d9df54747ae96116c1942973f9185c5c11c6658818b0f574c7d46e3beafcf15b",
+      "title": "JeNo 5.1\"",
       "firmware_version": [
         "4.4"
       ],

@@ -1,8 +1,8 @@
-#$ TITLE: JeNo 5.1"
+#$ TITLE: JeNo 5.1" (FR)
 #$ FIRMWARE_VERSION: 4.4
 #$ CATEGORY: TUNE
 #$ STATUS: EXPERIMENTAL
-#$ KEYWORDS: JeNo, 6S, Freestyle, 5 inch, 5", Cinematic, WE are FPV, WAF
+#$ KEYWORDS: JeNo, 6S, Freestyle, 5 pouces, 5", Cinematic, WE are FPV, WAF
 #$ AUTHOR: Jerome @jejefpv
 #$ FORCE_OPTIONS_REVIEW: TRUE
 
@@ -10,75 +10,75 @@
 
 #$ DESCRIPTION: <a href="https://www.wearefpv.fr/"><img src="https://www.wearefpv.fr/wp-content/uploads/2023/02/WaF-Logo-Preset.png" width="327px" height="97" style="margin-left: auto; margin-right: auto; display: block;"/></a>
 #$ DESCRIPTION:
-#$ DESCRIPTION: ### JeNo 5.1" Preset
+#$ DESCRIPTION: ### Preset pour le JeNo 5.1"
 #$ DESCRIPTION:
-#$ DESCRIPTION: <br>The JeNo is a sturdy OpenSource frame, inspired from the Apex, natively O3 Air Unit compatible and customizable with many options. Visit the
-#$ DESCRIPTION: <a href="https://www.printables.com/fr/model/339099-jeno-51-drone-frame">JeNo official Printables Page</a> to learn more about it.
+#$ DESCRIPTION: <br>Le JeNo est un châssis robuste, inspiré de l'Apex, nativement compatible Air Unit O3 et personnalisable avec de nombreuses options. Visitez la
+#$ DESCRIPTION: <a href="https://www.printables.com/fr/model/339099-jeno-51-drone-frame">page Printable officielle du JeNo</a> pour en savoir plus.
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: <b>Choose the following options from the drop-down:</b>
+#$ DESCRIPTION: <b>Utilisez la liste déroulante pour choisir parmi les options suivantes:</b>
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: * Select ESCs protocol and PIDs loop frequency
-#$ DESCRIPTION: * Pick PIDs option(s)
-#$ DESCRIPTION: * Pick Filtering option(s)
-#$ DESCRIPTION: * Optionally, pick your Radio Link
+#$ DESCRIPTION: * Sélection d'un protocole pour les ESCs et de la fréquence de la boucle PIDs
+#$ DESCRIPTION: * Choix des options PIDs
+#$ DESCRIPTION: * Choix des options de filtrage
+#$ DESCRIPTION: * Optionnellement, choisir un lien radio
 #$ DESCRIPTION: 
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: <b>Recommendations :</b>
+#$ DESCRIPTION: <b>Recommandations :</b>
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: * If you fly <b>without any Action Cam</b>, try to <b>center the lipo</b> on the Top plate
-#$ DESCRIPTION: * <b>Using RPM Filter is advised</b>, although it also works great without it (you can install <a href="https://esc-configurator.com/">Bluejay</a> on BLHeli_S ESCs)
-#$ DESCRIPTION: * Basic preset's tune is already quite high. Enable "High tune" and "High performance filter" only <b>after having tested default settings</b>.
-#$ DESCRIPTION: * Apply your specific RC Link preset <b>before</b> this preset (or use the generic ones provided with this preset)
-#$ DESCRIPTION: * If you manually applied a RC Link preset, <b>make sure RC Smoothing Auto Factor is not too high</b> (45 is a good compromise)
-#$ DESCRIPTION: * Enabling <b>I-term Relax cutoff</b> at 17 makes the quad feel more "rigid" compared to the default value (15)
+#$ DESCRIPTION: * Si vous volez <b>sans Action Cam</b>, essayer de <b>center la lipo</b> sur la Top plate
+#$ DESCRIPTION: * <b>L'usage du RPM Filter est conseillé</b>, néanmoins, ça marche aussi très bien sans (vous pouvez installer <a href="https://esc-configurator.com/">Bluejay</a> sur des ESCs BLHeli_S)
+#$ DESCRIPTION: * Le tune de base du preset est déjà assez poussé. N'activez les options "Tune poussé" and "Filtrage hautes performances" seulement <b>après avoir testé avec les réglages par défaut</b>.
+#$ DESCRIPTION: * Appliquez votre preset de lien Radio <b>avant</b> ce preset (ou utilisez l'un des génériques fournis avec ce preset)
+#$ DESCRIPTION: * Si vous avez manuellement appliquez un preset de lien Radio, <b>assurez vous que le RC Smoothing Auto Factor n'est pas trop élevé</b> (45 est un bon compromis)
+#$ DESCRIPTION: * L'activation du <b>I-term Relax cutoff</b> avec une valeur de 17 donne un feeling un peu plus "rigide" au quad comparé à la valeur par défaut (15)
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: Enjoy!
+#$ DESCRIPTION: Bon vol !
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION:
-#$ DESCRIPTION: * [FORUM SUPPORT/FEEDBACK](https://forum.wearefpv.fr/topic/19574-jeno-51-un-ch%C3%A2ssis-custom-modulaire-avec-fov-d%C3%A9gag%C3%A9-o3)
+#$ DESCRIPTION: * [FORUM AIDE/RETOURS](https://forum.wearefpv.fr/topic/19574-jeno-51-un-ch%C3%A2ssis-custom-modulaire-avec-fov-d%C3%A9gag%C3%A9-o3)
 #$ DESCRIPTION:
 #$ DESCRIPTION: <br>
-#$ DESCRIPTION: Designed by <b>Je</b>rome and <b>No</b>chamo from the French <a href="https://www.wearefpv.fr/">WE are FPV</a> community.
+#$ DESCRIPTION: Conçu par <b>Je</b>rome and <b>No</b>chamo de la communauté <a href="https://www.wearefpv.fr/">WE are FPV</a>.
 #$ DESCRIPTION: <br>
 
 # -- Reset PIDs and Filters to default --
 #$ INCLUDE: presets/4.4/tune/defaults_tune_filters.txt
 
 # ----- ESCs' protocol selection -----
-#$ OPTION_GROUP BEGIN: Choose <b>ONE</b> ESCs' protocol & PIDs loop Freq. :
+#$ OPTION_GROUP BEGIN: CHoisir <b>UN</b> protocol ESCs & une fréqu de boucle PIDs :
 
-    #$ OPTION BEGIN (UNCHECKED): <b>WITH RPM</b> DShot600 - 8Khz (F7 & up + 8K gyro)
+    #$ OPTION BEGIN (UNCHECKED): <b>AVEC RPM</b> DShot600 - 8Khz (F7 & plus + gyro 8K)
 		
 		set pid_process_denom = 1
 		set motor_pwm_protocol = DSHOT600
                 
     #$ OPTION END
 
-    #$ OPTION BEGIN (UNCHECKED): <b>WITH RPM</b> Dshot300 - 4Khz (F4 or BMI gyro)
+    #$ OPTION BEGIN (UNCHECKED): <b>AVEC RPM</b> Dshot300 - 4Khz (F4 ou gyro BMI)
 	
 		set pid_process_denom = 2
 		set motor_pwm_protocol = DSHOT300
         
     #$ OPTION END
 	
-	#$ OPTION BEGIN (UNCHECKED): <b>NO RPM</b> Dshot600 - 8Khz (8K Gyro)
+	#$ OPTION BEGIN (UNCHECKED): <b>SANS RPM</b> Dshot600 - 8Khz (Gyro 8K)
 	
 		set pid_process_denom = 1
 		set motor_pwm_protocol = DSHOT600
         
     #$ OPTION END
 	
-	#$ OPTION BEGIN (UNCHECKED): <b>NO RPM</b> Dshot300 - 4Khz (BMI gyro)
+	#$ OPTION BEGIN (UNCHECKED): <b>SANS RPM</b> Dshot300 - 4Khz (Gyro BMI)
 	
 		set pid_process_denom = 2
 		set motor_pwm_protocol = DSHOT300
@@ -97,21 +97,21 @@ set simplified_pitch_d_gain = 105
 set simplified_dterm_filter_multiplier = 140
 set dyn_idle_min_rpm = 30
 
-#$ OPTION_GROUP BEGIN: PIDs options :
+#$ OPTION_GROUP BEGIN: Options PIDs :
 
-    #$ OPTION BEGIN (CHECKED): I-term relax at 17
+    #$ OPTION BEGIN (CHECKED): I-term relax à 17
 
         set iterm_relax_cutoff = 17
 
     #$ OPTION END
 
-    #$ OPTION BEGIN (UNCHECKED): ESCs @48 Khz or more
+    #$ OPTION BEGIN (UNCHECKED): ESCs @48 Khz ou plus
 
         set thrust_linear = 20
 
     #$ OPTION END
 	
-	#$ OPTION BEGIN (UNCHECKED): High tune (clean build)
+	#$ OPTION BEGIN (UNCHECKED): Tune poussé (build sain)
 
         set simplified_master_multiplier = 100
 
@@ -133,9 +133,9 @@ set yaw_lowpass_hz = 0
 
 set simplified_dterm_filter_multiplier = 140
 
-#$ OPTION_GROUP BEGIN: Filtering options :
+#$ OPTION_GROUP BEGIN: Options de filtrage :
 
-    #$ OPTION BEGIN (CHECKED): Enable RPM filter (if supported)
+    #$ OPTION BEGIN (CHECKED): Activer le filtre RPM (si supporté)
 
         set dshot_bidir = ON
 		set rpm_filter_harmonics = 3
@@ -149,7 +149,7 @@ set simplified_dterm_filter_multiplier = 140
 
     #$ OPTION END
 	
-	#$ OPTION BEGIN (UNCHECKED): High performance (clean build)
+	#$ OPTION BEGIN (UNCHECKED): Hautes performances (build sain)
 	
 		set simplified_gyro_filter_multiplier = 155
 		set simplified_dterm_filter_multiplier = 155
@@ -162,7 +162,7 @@ set simplified_dterm_filter_multiplier = 140
 
 #$ OPTION_GROUP END
 
-#$ OPTION_GROUP BEGIN: Choose RC Link :
+#$ OPTION_GROUP BEGIN: Choisir un lien Radio :
 
     #$ OPTION BEGIN (UNCHECKED): Crossfire Dynamic
         #$ INCLUDE: presets/4.3/rc_link/defaults.txt
