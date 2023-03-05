@@ -50,8 +50,10 @@
 #$ DESCRIPTION: <br>
 #$ DESCRIPTION: 
 
+# -- Reset PIDs and Filters to default --
+#$ INCLUDE: presets/4.4/tune/defaults_tune_filters.txt
 
-# -- ESCs' protocol selection --
+# ----- ESCs' protocol selection -----
 #$ OPTION_GROUP BEGIN: Choose <b>ONE</b> ESCs' protocol & PIDs loop Freq. :
 
     #$ OPTION BEGIN (UNCHECKED): <b>WITH RPM</b> DShot600 - 8Khz (F7 & up + 8K gyro)
@@ -84,10 +86,7 @@
 
 #$ OPTION_GROUP END
 
-# -- PIDs for JeNo --
-
-#$ INCLUDE: presets/4.3/tune/defaults.txt
-
+# ----- PIDs for JeNo, load safe tune (already quite high) -----
 set simplified_master_multiplier = 90
 set simplified_d_gain = 160
 set simplified_pi_gain = 150
@@ -119,10 +118,7 @@ set dyn_idle_min_rpm = 30
 
 #$ OPTION_GROUP END
 
-# ---- Filters Base Setup -------
-
-#$ INCLUDE: presets/4.3/filters/defaults.txt
-
+# ----- Filters Base Setup (load safe filtering, already quite reduced) -------
 set dshot_bidir = OFF
 set simplified_gyro_filter_multiplier = 140
 set gyro_lpf1_static_hz = 0
