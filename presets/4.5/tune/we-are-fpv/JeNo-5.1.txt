@@ -53,7 +53,7 @@
 #$ DESCRIPTION: <br>
 
 # -- Reset PIDs and Filters to default --
-#$ INCLUDE: presets/4.4/tune/defaults_tune_filters.txt
+#$ INCLUDE: presets/4.5/tune/defaults_tune_filters.txt
 
 # ----- ESCs' protocol selection -----
 #$ OPTION_GROUP BEGIN: Choose <b>ONE</b> ESCs' protocol & PIDs loop Freq. :

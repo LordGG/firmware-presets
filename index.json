@@ -6153,6 +6153,52 @@
       "priority": 1000000000000
     },
     {
+      "fullPath": "presets/4.5/tune/we-are-fpv/JeNo-5.1-FR.txt",
+      "hash": "87bf1ce92247a1597bbc811dfc7903f6ce5e10423acf317927a35ae277e47fb5",
+      "title": "JeNo 5.1\" (FR)",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "JeNo",
+        "6S",
+        "Freestyle",
+        "5 pouces",
+        "5\"",
+        "Cinematic",
+        "WE are FPV",
+        "WAF"
+      ],
+      "author": "Jerome @jejefpv",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/4.5/tune/we-are-fpv/JeNo-5.1.txt",
+      "hash": "925df5ad4d9d2adc6206e894625febae22bc4ad41372469393f243ba3aace32b",
+      "title": "JeNo 5.1\"",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "JeNo",
+        "6S",
+        "Freestyle",
+        "5 inch",
+        "5\"",
+        "Cinematic",
+        "WE are FPV",
+        "WAF"
+      ],
+      "author": "Jerome @jejefpv",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/4.5/tune/whoop_ayyykayyy.txt",
       "hash": "fbce5d4500e7104aa8dbc6835a6e2900964845632f6db1993b8a9c8f086d8c27",
       "title": "Whoop race tune by AyyyKayyy",
