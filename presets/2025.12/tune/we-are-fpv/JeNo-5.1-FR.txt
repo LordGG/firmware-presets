@@ -54,6 +54,7 @@
 
 # -- Reset PIDs and Filters to default --
 #$ INCLUDE: presets/2025.12/tune/defaults.txt
+#$ INCLUDE: presets/4.5/filters/defaults.txt
 
 # ----- ESCs' protocol selection -----
 #$ OPTION_GROUP BEGIN: Choisir <b>UN</b> protocole ESCs & une fréq de boucle PIDs :
@@ -169,6 +170,8 @@ set simplified_dterm_filter_multiplier = 140
     #$ OPTION END 
 
 #$ OPTION_GROUP END
+
+simplified_tuning apply
 
 #$ OPTION_GROUP BEGIN: Choisir un lien Radio :
 
@@ -291,5 +294,3 @@ set simplified_dterm_filter_multiplier = 140
     #$ OPTION END
 
 #$ OPTION_GROUP END
-
-simplified_tuning apply
