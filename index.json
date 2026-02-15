@@ -2133,7 +2133,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/we-are-fpv/JeNo-5.1-FR.txt",
-      "hash": "13fae7b6ca6112c4d583f5d08545e8c35aab44e7710e564a205a9a39c1f30797",
+      "hash": "4db373eaa38876f315079179e346b594e8fc1a6cadc540066611dff5cdb4900e",
       "title": "JeNo 5.1\" (FR)",
       "firmware_version": [
         "2025.12"
@@ -2156,7 +2156,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/we-are-fpv/JeNo-5.1.txt",
-      "hash": "118bea0547e5281b12be3791a591ef23a4b69424ba138a766f46a97bf1da8516",
+      "hash": "9bfad42b84c1fcb457fd3d9cccf768ee9a200920d028915b27c061c3cfcbcaf2",
       "title": "JeNo 5.1\"",
       "firmware_version": [
         "2025.12"
