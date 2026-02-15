@@ -1771,7 +1771,7 @@
     },
     {
       "fullPath": "presets/2025.12/tune/defaults.txt",
-      "hash": "45ed771374ec26cb8e755e2db3647ba01229c72daa5aad7b3b66764f2ba25317",
+      "hash": "9dc4830c58000eab82a850b70117644dadac3b04b3fc485cb3f38fae969f049b",
       "title": "Betaflight 2025.12 TUNE defaults",
       "firmware_version": [
         "2025.12"
